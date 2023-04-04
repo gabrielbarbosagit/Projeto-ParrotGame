@@ -1,11 +1,14 @@
-@media (max-width: 767px) {
+@media (max-width: 600px) {
   .container {
     padding: 50px;
+    justify-content: center;
+   
   }
   
   .memorycard {
     height: 150px;
     width: 120px;
+    justify-content: center;
   }
   
   .memorycard img {
@@ -20,6 +23,8 @@
     margin: 0 auto;
     width: 80%;
     padding: 20px;
+    margin-top: 20px
+    
 
   }
   
@@ -57,7 +62,7 @@ body {
 .memorycard{
   
   border: 1px solid blue;
-  height: 200px;
+  height: 280px;
   width: 170px;
   background-color: pink;
   align-items: center;
