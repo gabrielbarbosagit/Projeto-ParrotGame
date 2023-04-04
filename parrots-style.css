@@ -1,36 +1,5 @@
-@media (max-width: 400px) {
-  .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .memorycard {
-    height: 150px;
-    width: 120px;
-    justify-content: center;
-  }
-  
-  .memorycard img {
-    height: 70px;
-    width: 70px;
-  }
-  
-  .titulo {
-    font-size: 24px;
-    text-align: center;
-    display: block;
-    margin: 0 auto;
-    width: 80%;
-    padding: 20px;
-    margin-top: 20px;
-    justify-content: center;
-    width: 100%;
-  }
-}
-
 body {
-  background-color: #eef98f;
+  background-color: #eef9bf;
   text-align: center;
 }
 
@@ -68,4 +37,36 @@ body {
 .memorycard img{
   height: 100px;
   width: 100px;
+}
+
+@media (max-width: 400px) {
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .memorycard {
+    height: 150px;
+    width: 200px;
+    justify-content: center;
+  }
+  
+  .memorycard img {
+    height: 70px;
+    width: 70px;
+  }
+  
+  .titulo {
+    font-size: 24px;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    padding: 20px;
+    margin-top: 20px;
+    justify-content: center;
+    width: 100%;
+    
+  }
 }
