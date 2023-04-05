@@ -39,7 +39,7 @@ body {
   width: 100px;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 600px) {
   .container {
     display: flex;
     justify-content: center;
@@ -47,9 +47,11 @@ body {
   }
   
   .memorycard {
-    height: 150px;
-    width: 200px;
+   
     justify-content: center;
+    height: 140px;
+    width: 120px;
+    ;
   }
   
   .memorycard img {
@@ -62,7 +64,6 @@ body {
     text-align: center;
     display: block;
     margin: 0 auto;
-    width: 80%;
     padding: 20px;
     margin-top: 20px;
     justify-content: center;
