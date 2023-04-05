@@ -19,14 +19,14 @@ body {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  padding: 100px 200px;
-  gap: 20px; 
+  padding: 0;
+    gap: 20px; 
 }
 
 .memorycard{
   border: 1px solid blue;
-  height: 280px;
-  width: 170px;
+  height: 270px;
+  width: 180px;
   background-color: pink;
   align-items: center;
   justify-content: center;
