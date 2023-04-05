@@ -26,7 +26,7 @@ body {
 .memorycard{
   border: 1px solid blue;
   height: 280px;
-  width: 170px;
+  width: 150px;
   background-color: pink;
   align-items: center;
   justify-content: center;
@@ -44,30 +44,29 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    padding: 0 20px; /* Reduce padding for smaller screens */
   }
-  
+
   .memorycard {
-   
     justify-content: center;
     height: 140px;
     width: 120px;
-    ;
   }
-  
+
   .memorycard img {
     height: 70px;
     width: 70px;
   }
-  
+
   .titulo {
     font-size: 24px;
     text-align: center;
-    display: block;
-    margin: 0 auto;
-    padding: 20px;
-    margin-top: 20px;
+    display: flex;
     justify-content: center;
+    align-items: center;
     width: 100%;
+    margin-top: 20px;
     
   }
 }
