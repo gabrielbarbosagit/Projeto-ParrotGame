@@ -90,8 +90,8 @@ for (let i = 1; i <= numberOfCards; i++) {
   card.className = 'card';
   card.dataset.framework = 'image' + Math.ceil(i/2);
   card.innerHTML = `
-    <img class="front" src="imagens/image${Math.ceil(i/2)}.gif" data-test="face-up-img">
-    <img class="back" src="./imagens/back.png" data-test="face-down-img">
+    <img class="front" src="imagens/image${Math.ceil(i/2)}.gif" data-test="face-up-image">
+    <img class="back" src="./imagens/back.png" data-test="face-down-image">
   `;
   card.addEventListener('click', flipCard);
   cards.push(card);
