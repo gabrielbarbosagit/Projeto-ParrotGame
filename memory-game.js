@@ -96,30 +96,13 @@ for (let i = 1; i <= numberOfCards; i++) {
     `;
     card.addEventListener('click', flipCard);
     cards.push(card);
-  }
-  
+}
 
+for (let i = cards.length - 1; i > 0; i--) {
+  const j = Math.floor(Math.random() * (i + 1));
+  [cards[i], cards[j]] = [cards[j], cards[i]];
+}
 
-cards.forEach(card => {
-    let randomPos = Math.floor(Math.random() * numberOfCards - 1);
-    ;
-  card.style.order = randomPos;
-  container.appendChild(card);
-});
-
-cards.forEach(card => card.addEventListener('click', flipCard));
-
-
-
+cards.forEach(card => container.appendChild(card));
 
 console.log(`Number of cards in the deck: ${numberOfCards}`);
-
-
-
-
-    cards.forEach(card => {
-      let randomPos = Math.floor(Math.random() * numberOfCards);
-      card.style.order = randomPos;
-      container.appendChild(card);
-    });
-  
