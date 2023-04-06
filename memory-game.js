@@ -90,8 +90,8 @@ for (let i = 1; i <= numberOfCards; i++) {
   card.className = 'card';
   card.dataset.framework = 'image' + Math.ceil(i/2);
   card.innerHTML = `
-    <img class="front" src="imagens/image${Math.ceil(i/2)}.gif">
-    <img class="back" src="./imagens/back.png">
+  <img class="front"src="${cardData[i].imageSrc}" data-test="face-up-image">
+  <img class="back" src="./imagens/back.png" data-test="face-down-image">
   `;
   card.addEventListener('click', flipCard);
   cards.push(card);
@@ -134,8 +134,8 @@ function shuffle() {
       card.className = 'card';
       card.dataset.framework = cardData[i].framework;
       card.innerHTML = `
-        <img class="front" src="${cardData[i].imageSrc}">
-        <img class="back" src="./imagens/back.png">
+        <img class="front"src="${cardData[i].imageSrc}" data-test="face-up-image">
+        <img class="back" src="./imagens/back.png" data-test="face-down-image">
       `;
       card.addEventListener('click', flipCard);
       cards.push(card);
