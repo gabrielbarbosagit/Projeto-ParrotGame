@@ -91,7 +91,7 @@ for (let i = 1; i <= numberOfCards; i++) {
     card.dataset.framework = 'image' + Math.ceil(i/2);
     card.dataset.test = 'card'; // Add the data-test attribute here
     card.innerHTML = `
-      <img class="front" src="imagens/image${Math.ceil(i/2)}.gif" data-test="face-up-image">
+      <img class="front" src="./imagens/image${Math.ceil(i/2)}.gif" data-test="face-up-image">
       <img class="back" src="./imagens/back.png" data-test="face-down-image">
     `;
     card.addEventListener('click', flipCard);
@@ -101,7 +101,8 @@ for (let i = 1; i <= numberOfCards; i++) {
 
 
 cards.forEach(card => {
-  let randomPos = Math.floor(Math.random() * numberOfCards);
+    let randomPos = Math.floor(Math.random() * numberOfCards - 1);
+    ;
   card.style.order = randomPos;
   container.appendChild(card);
 });
