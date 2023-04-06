@@ -90,8 +90,8 @@ for (let i = 1; i <= numberOfCards; i++) {
   card.className = 'card';
   card.dataset.framework = 'image' + Math.ceil(i/2);
   card.innerHTML = `
-  <img class="front"src="${cardData[i].imageSrc}" data-test="face-up-image">
-  <img class="back" src="./imagens/back.png" data-test="face-down-image">
+    <img class="front" src="imagens/image${Math.ceil(i/2)}.gif">
+    <img class="back" src="./imagens/back.png">
   `;
   card.addEventListener('click', flipCard);
   cards.push(card);
@@ -123,28 +123,27 @@ function shuffle() {
         imageSrc: `./imagens/image${i}.gif`
       });
     }
-  
+
     for (let i = cardData.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [cardData[i], cardData[j]] = [cardData[j], cardData[i]];
     }
-  
+
     for (let i = 0; i < numberOfCards; i++) {
       const card = document.createElement('div');
       card.className = 'card';
       card.dataset.framework = cardData[i].framework;
       card.innerHTML = `
-        <img class="front"src="${cardData[i].imageSrc}" data-test="face-up-image">
-        <img class="back" src="./imagens/back.png" data-test="face-down-image">
+        <img class="front" src="${cardData[i].imageSrc}">
+        <img class="back" src="./imagens/back.png">
       `;
       card.addEventListener('click', flipCard);
       cards.push(card);
     }
-  
+
     cards.forEach(card => {
       let randomPos = Math.floor(Math.random() * numberOfCards);
       card.style.order = randomPos;
       container.appendChild(card);
     });
   }
-  
