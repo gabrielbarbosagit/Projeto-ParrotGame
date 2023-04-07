@@ -7,9 +7,9 @@ let matchedCards = 0;
 let flips = 0;
 
 function getNumberOfCards() {
-  let numberOfCards = parseInt(prompt("How many cards do you want to play with? (4-14, even numbers only)"));
+  let numberOfCards = parseInt(prompt("Com quants cartas você quer jogar?"));
   while (numberOfCards < 4 || numberOfCards > 14 || numberOfCards % 2 !== 0) {
-    numberOfCards = parseInt(prompt("Please enter an even number between 4 and 14."));
+    numberOfCards = parseInt(prompt("Por favor digite um número par entre 2-14"));
   }
   return numberOfCards;
 }
@@ -57,13 +57,13 @@ function disableCards() {
 
   if (matchedCards === numberOfCards / 2) {
     setTimeout(() => {
-      alert(`Você ganhou em ${flips} jogadas!.`);
+      alert(`Parabéns! Você ganhou em ${flips} jogadas!.`);
     }, 200);
   }
 
   resetBoard();
 
-  lockboard = false; // reset lockboard to false
+  lockboard = false; 
 }
 
 function unflipCards() {
@@ -75,7 +75,7 @@ function unflipCards() {
 
     resetBoard();
 
-    lockboard = false; // reset lockboard to false
+    lockboard = false; 
   }, 1000);
 }
 
@@ -89,7 +89,7 @@ for (let i = 1; i <= numberOfCards; i++) {
     const card = document.createElement('div');
     card.className = 'card';
     card.dataset.framework = 'image' + Math.ceil(i/2);
-    card.dataset.test = 'card'; // Add the data-test attribute here
+    card.dataset.test = 'card';
     card.innerHTML = `
       <img class="front" src="./imagens/image${Math.ceil(i/2)}.gif" data-test="face-up-image">
       <img class="back" src="./imagens/back.png" data-test="face-down-image">
